@@ -7,7 +7,7 @@ This has been tested on a Pixel 7 Pro device running the latest Android update, 
 ## Summary
 
 1. Create two `NotificationChannel` objects - the parent channel and the exploit channel.
-2. Build a long-lived (`ShortcutInfo.Builder.setLongLived()`) dynamic shortcut and pushing it to the system using `ShortcutManager.pushDynamicShortcut()`.
+2. Build a long-lived (`ShortcutInfo.Builder.setLongLived()`) dynamic shortcut and push it to the system using `ShortcutManager.pushDynamicShortcut()`.
 3. Use `NotificationChannel.setConversationId()` to mark the exploit channel as a proper conversation-centric channel, by associating it with the parent channel and the shortcut.
 4. Use reflection to mark the private field `mImportantConvo` in the exploit channel as accessible.
 5. Set `mImportantConvo` to true.
